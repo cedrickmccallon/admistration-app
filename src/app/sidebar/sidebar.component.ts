@@ -9,6 +9,12 @@ export interface RouteInfo {
 
 export const ROUTES: RouteInfo[] = [
   {
+    path:'/dashboard',
+    title: 'Home',
+    type: 'link',
+    iconType: 'nc-icon nc-book-bookmark'
+  },
+  {
     path: '/products',
     title: 'Product Management',
     type: 'link',
@@ -25,13 +31,8 @@ export const ROUTES: RouteInfo[] = [
     title: 'Order Management',
     type: 'link',
     iconType: 'nc-icon nc-book-bookmark'
-  },
-  {
-    path:'/dashboard',
-    title: 'Home',
-    type: 'link',
-    iconType: 'nc-icon nc-book-bookmark'
   }
+
 ]
 
 @Component({

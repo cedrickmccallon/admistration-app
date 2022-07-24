@@ -14,7 +14,7 @@ export class ProductService {
     this.productURL = 'http://192.168.1.152:8080/products';
   }
 
-  public findProductById(id: number) :Observable<Product> {
+  public findProductById(id: string) :Observable<Product> {
     return this.http.get<Product>(this.productURL + "/" + id);
   }
 
@@ -30,9 +30,9 @@ export class ProductService {
     return this.http.post<Product>(this.productURL, product);
   }
 
-  public updateProduct(product: Product) {
-    let endPoint = this.productURL + "/" + product.id;
-    return this.http.put<Product>(endPoint, product).subscribe( data => console.log("Product{} updated successfully", data.id));
+  public updateProduct(product: Product, id: string) {
+    let endPoint = this.productURL + "/" + id;
+    return this.http.put<Product>(endPoint, product);
   }
 
 }

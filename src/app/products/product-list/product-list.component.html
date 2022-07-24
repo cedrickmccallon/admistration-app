@@ -1,0 +1,20 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Product Type</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let p of allProducts">
+        <td>{{ p.id }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.productType }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

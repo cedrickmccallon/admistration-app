@@ -1,0 +1,14 @@
+<p>products works!</p>
+<div class="sidebar-wrapper">
+  <ul class="nav">
+    <li routerLinkActive="active" *ngFor="let productMenuItem of menuItems" class="nav-link">
+      <a [routerLink]="[productMenuItem.path]" *ngIf="productMenuItem.type === 'link'">
+        <p>{{productMenuItem.title}}</p>
+      </a>
+    </li>
+  </ul>
+</div>
+<router-outlet> </router-outlet>
+
+
+

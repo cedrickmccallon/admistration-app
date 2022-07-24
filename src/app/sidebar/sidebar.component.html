@@ -1,0 +1,10 @@
+<div class="sidebar-wrapper">
+  <ul class="nav">
+    <li routerLinkActive="active" *ngFor="let menuitem of menuItems" class="nav-link">
+      <a [routerLink]="[menuitem.path]" *ngIf="menuitem.type === 'link'">
+        <i class="{{menuitem.iconType}}"></i>
+        <p>{{menuitem.title}}</p>
+      </a>
+    </li>
+  </ul>
+</div>

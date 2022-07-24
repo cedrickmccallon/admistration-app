@@ -11,7 +11,8 @@ export class ProductService {
 
 
   constructor(private http: HttpClient) {
-    this.productURL = 'http://192.168.1.152:8080/products';
+    //this.productURL = 'http://192.168.1.152:8080/products';
+    this.productURL = 'http://localhost:8080/products';
   }
 
   public findProductById(id: string) :Observable<Product> {

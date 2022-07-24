@@ -10,6 +10,8 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import {ReactiveFormsModule} from "@angular/forms";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import {ReactiveFormsModule} from "@angular/forms";
     ProductsRoutingModule,
     MatTableModule,
     MatSortModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatPaginatorModule,
+    MatButtonModule
   ],
   providers: [ProductService]
 })

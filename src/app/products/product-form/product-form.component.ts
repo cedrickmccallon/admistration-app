@@ -53,6 +53,13 @@ export class ProductFormComponent implements OnInit {
           this.productImages = product.images;
           this.productPrices = product.prices
         });
+    } else{
+      this.productAttributes = new Map<string, string>();
+      this.productAttributes.set("Default", "Default");
+      this.productImages = new Map<string, string>();
+      this.productImages.set("Default", "Default");
+      this.productPrices = new Map<string, number>();
+      this.productPrices.set("Default", 0.00);
     }
   }
 

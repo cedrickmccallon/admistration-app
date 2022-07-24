@@ -1,5 +1,6 @@
 <p>products works!</p>
-<div class="sidebar-wrapper">
+<div class="col-md-4">
+<div class="panel panel-default">
   <ul class="nav">
     <li routerLinkActive="active" *ngFor="let productMenuItem of menuItems" class="nav-link">
       <a [routerLink]="[productMenuItem.path]" *ngIf="productMenuItem.type === 'link'">
@@ -9,6 +10,7 @@
   </ul>
 </div>
 <router-outlet> </router-outlet>
+</div>
 
 
 

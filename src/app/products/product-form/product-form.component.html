@@ -60,12 +60,25 @@
               </table>
             </div>
           </div>
+          <div class="row">
+            <label class="col-md-3 col-form-label">Images</label>
+            <div class="col-sm-6">
+              <table class="table" >
+                <tbody *ngFor="let image of productImages | keyvalue">
+                <tr>
+                  <td style="width: 300px">{{image.key}}</td>
+                  <td style="width: 150px"> <a href="{{image.value }}">{{image.value }}</a></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </form>
       </div>
       <div class="card-footer ">
         <div class="row">
           <label class="col-md-3"></label>
-          <div class="col-md-9">
+          <div class="col-md-6" style="border-left: 100px">
             <button type="submit" [disabled]="loading" class="btn btn-info btn-round">
               <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Save </button>
             <a routerLink="/products/productList" class="btn btn-danger btn-round">Cancel</a>
